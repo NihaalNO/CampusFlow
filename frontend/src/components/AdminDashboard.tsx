@@ -2,7 +2,22 @@ import { useState } from 'react';
 import DisruptionCard from '../components/DisruptionCard';
 
 // Mock data for demonstration
-const mockDisruptions = [
+type MockDisruption = {
+  id: string;
+  studentName: string;
+  studentId: string;
+  category: string;
+  priority: 'high' | 'low';
+  description: string;
+  status: 'pending' | 'in_progress' | 'resolved';
+  createdAt: string;
+  aiTone: string;
+  aiConfidence: number;
+  aiRecommendation: string;
+  imageUrls: string[];
+};
+
+const mockDisruptions: MockDisruption[] = [
   {
     id: 'DIS-001',
     studentName: 'John Doe',
